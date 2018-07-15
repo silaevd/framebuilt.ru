@@ -1,0 +1,27 @@
+.comments {
+  background: $sectionBg;
+  padding: 25px 15px;
+}
+
+.commentsItem {
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__name {
+    font-family: "ForosMedium", sans-serif;
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  &__date {
+    font-size: 12px;
+    margin-bottom: 7px;
+    color: #777;
+  }
+
+  &__text {
+    text-align: justify;
+  }
+}

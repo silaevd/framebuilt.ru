@@ -1,0 +1,73 @@
+.reasons {
+  padding: 25px 15px;
+
+  .flex {
+    @include row-flex();
+  }
+}
+
+.reasonsItem {
+  @include col();
+  @include col-4();
+  text-align: center;
+  padding: 25px;
+
+  &__img {
+    max-width: 92px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  &__title {
+    font-family: "ForosMedium", sans-serif;
+    text-transform: uppercase;
+    color: $linkColor;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    color: $textColor;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.reasonsItem_first {
+  font-family: "ForosBold", sans-serif;
+  text-transform: uppercase;
+  font-size: 45px;
+  color: $textColor;
+  text-align: center;
+  align-self: center;
+}
+
+@include max-screen(899px) {
+
+  .reasonsItem_first {
+    font-size: 40px;
+  }
+}
+
+@include max-screen(768px) {
+
+  .reasonsItem {
+    @include col-6();
+  }
+
+  .reasonsItem_first {
+    text-align: center;
+  }
+}
+
+@include max-screen(480px) {
+
+  .reasonsItem {
+    @include col-12();
+  }
+
+  .reasonsItem_first {
+    text-align: center;
+  }
+}

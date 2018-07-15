@@ -1,0 +1,178 @@
+<section class="pageTitle">
+    <div class="container">
+        <h1>{{ project?.title }}</h1>
+    </div>
+</section>
+
+<section class="project">
+    <div class="container">
+        <div class="flex">
+            <div class="project__content">
+
+                <section class="projectSlider">
+
+                    <div class="fotorama" >
+
+                        <a *ngFor="let videoLink of videoLinks" href="{{videoLink}}" data-img=""></a>
+
+                        <img *ngFor="let image of images" src="http://api.zemdevelopment.ru/public/{{image}}" alt="">
+
+                    </div>
+
+                    <div class="projectDescription" [innerHTML] = "project?.description"></div>
+                </section>
+
+            </div>
+
+            <div class="project__info">
+                <div class="projectData">
+                    <p class="projectData__title">{{ project?.title }}</p>
+                    <div class="projectData__values">
+
+                        <div class="projectData__group">
+                            <span class="key">Площадь, кв.м:</span>
+                            <span class="val">{{project?.area}}</span>
+                        </div>
+
+                        <div class="projectData__group">
+                            <span class="key">Размеры, м:</span>
+                            <span class="val">{{project?.size}}</span>
+                        </div>
+
+                        <div class="projectData__group">
+                            <span class="key">Цена проекта:</span>
+                            <span class="val">{{project?.price}}
+                                <i class="fas fa-ruble-sign"></i>
+                            </span>
+                        </div>
+
+                        <!--<div class="projectData__group">-->
+                            <!--<span class="key">Цена за кв.м:</span>-->
+                            <!--<span class="val">30 088-->
+                                <!--<i class="fas fa-ruble-sign"></i>-->
+                            <!--</span>-->
+                        <!--</div>-->
+
+                        <div class="projectData__group">
+                            <span class="key">Срок готовности:</span>
+                            <span class="val">{{project?.deadline}} дней</span>
+                        </div>
+
+                    </div>
+
+                    <form class="projectDataForm" id="projectDataForm">
+
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="admin_email" value="{{contacts.data.email}}">
+                        <input type="hidden" name="site" value="zemdevelopment.ru">
+                        <input type="hidden" name="form_subject" value="{{project?.title}}">
+                        <!-- END Hidden Required Fields -->
+
+                        <h3>Оставьте нам заявку</h3>
+                        <div class="inputGroup">
+                            <p class="inputErrorText"></p>
+                            <input class="formInput" type="text" name="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="inputGroup">
+                            <p class="inputErrorText"></p>
+                            <input class="formInput" type="text" name="phone" placeholder="Ваше телефон">
+                        </div>
+                        <div class="inputGroup">
+                            <p class="inputErrorText"></p>
+                            <textarea class="formInput" rows="4" name="text" placeholder="Ваш вопрос"></textarea>
+                        </div>
+                        <button class="footerForm__submitBtn" type="submit" form="projectDataForm" value="submit">
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="project__control">
+                <h3>онлайн контроль на всех стадиях строительства</h3>
+                <p>
+                    После заказа проекта Вы получите возможность наблюдения в режиме онлайн за этапами
+                    строительства.
+                </p>
+            </div>
+            <div class="project__materials">
+                <h2>Используемый материал</h2>
+                <section class="partners">
+                    <div class="flex">
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/bonolit.png">
+                        </div>
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/wiener.png">
+                        </div>
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/grandline.png">
+                        </div>
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/isover.png">
+                        </div>
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/kbe.png">
+                        </div>
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/paroc.png">
+                        </div>
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/rehau.png">
+                        </div>
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/seneg.png">
+                        </div>
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/tehnonikol.png">
+                        </div>
+                        <div class="partners__item">
+                            <img class="partners__img" src="./assets/images/partners/ytong.png">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+<!--<section class="similarProjects">-->
+<!--<div class="container">-->
+<!--<h3 class="similarProjects__title">Похожие проекты</h3>-->
+<!--<div class="projects__items">-->
+<!--<div class="flex">-->
+<!--<div class="projectItem"><a class="projectItem__imgLink" href="elis.html"><img class="projectItem__img" src="./src/images/projects/elis.jpg"></a>-->
+<!--<div class="projectItem__info"><a class="projectItem__title" href="elis.html">Проект элис</a>-->
+<!--<div class="flex">-->
+<!--<p class="projectItem__area">Площадь:<span class="projectItem__value"> 155,89</span> кв.м</p>-->
+<!--<p class="projectItem__size">Размеры:<span class="projectItem__value"> 12,68x11,17</span> м</p>-->
+<!--</div>-->
+<!--<div class="flex">-->
+<!--<p class="projectItem__price">4 676 700<i class="fas fa-ruble-sign"></i></p><a class="projectItem__more" href="elis.html">Подробнее</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="projectItem"><a class="projectItem__imgLink" href="lilit.html"><img class="projectItem__img" src="./src/images/projects/lilit.jpg"></a>-->
+<!--<div class="projectItem__info"><a class="projectItem__title" href="lilit.html">Проект лилит</a>-->
+<!--<div class="flex">-->
+<!--<p class="projectItem__area">Площадь:<span class="projectItem__value"> 194,32</span> кв.м</p>-->
+<!--<p class="projectItem__size">Размеры:<span class="projectItem__value"> 17,1х9,15</span> м</p>-->
+<!--</div>-->
+<!--<div class="flex">-->
+<!--<p class="projectItem__price">5 635 000<i class="fas fa-ruble-sign"></i></p><a class="projectItem__more" href="lilit.html">Подробнее</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="projectItem"><a class="projectItem__imgLink" href="lounch.html"><img class="projectItem__img" src="./src/images/projects/lounch.jpg"></a>-->
+<!--<div class="projectItem__info"><a class="projectItem__title" href="lounch.html">Проект лаунч</a>-->
+<!--<div class="flex">-->
+<!--<p class="projectItem__area">Площадь:<span class="projectItem__value"> 316,07</span> кв.м</p>-->
+<!--<p class="projectItem__size">Размеры:<span class="projectItem__value"> 17,53x12,54</span> м</p>-->
+<!--</div>-->
+<!--<div class="flex">-->
+<!--<p class="projectItem__price">7 730 000<i class="fas fa-ruble-sign"></i></p><a class="projectItem__more" href="lounch.html">Подробнее</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->

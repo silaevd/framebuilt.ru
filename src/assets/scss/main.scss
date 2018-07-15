@@ -1,0 +1,131 @@
+@import "reset";
+@import "fonts";
+@import "media-queries";
+@import "variables";
+@import "smart-grid";
+
+//Libs
+@import "libs/magnific-popup/magnific-popup";
+@import "libs/fotorama/fotorama";
+
+//FontAwesome
+$fa-font-path:   "assets/fonts/fontawesome";
+@import "libs/fontawesome-5.0.6/fontawesome";
+@import "libs/fontawesome-5.0.6/fa-regular.scss";
+@import "libs/fontawesome-5.0.6/fa-solid.scss";
+
+//Partials
+@import "partials/header";
+@import "partials/mainSlider";
+@import "partials/popularProjects";
+@import "partials/projectItem";
+@import "partials/reasons";
+@import "partials/partners";
+@import "partials/mainText";
+@import "partials/footer";
+@import "partials/breadcrumbs";
+@import "partials/projects";
+@import "partials/notFind";
+@import "partials/projectsTextAfter";
+@import "partials/aboutUs";
+@import "partials/certificates";
+@import "partials/constructionPlan";
+@import "partials/payments";
+@import "partials/contacts";
+@import "partials/project";
+@import "partials/similarProjects";
+@import "partials/popUp";
+@import "partials/comments";
+@import "partials/callRequest";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "ForosRegular", sans-serif;
+  font-size: 16px;
+  color: $textColor;
+}
+
+h1 {font-size: 32px;}
+h2 {font-size: 24px;}
+h3 {font-size: 18px;}
+h4 {font-size: 16px;}
+h5 {font-size: 13px;}
+h6 {font-size: 12px;}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+  outline: none;
+
+  &:hover {
+    color: $linkColor_hover;
+    text-decoration: underline;
+  }
+}
+
+strong {
+  font-family: "ForosMedium", sans-serif;
+}
+
+input[type="text"], textarea {
+  font-size: 16px;
+
+  &:focus {
+    border: 1px solid #F7A707 !important;
+  }
+}
+
+button {
+  outline: none;
+  border: 1px solid gray;
+  background-color: transparent;
+  padding: 0.7em 1.2em;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.strong {
+  font-family: "ForosBold", sans-serif;
+}
+
+.pageTitle {
+  background: #f5f5f3;
+  padding: 25px 15px;
+
+  h1 {
+    font-family: "ForosBold", sans-serif;
+    color: $textColor;
+    text-transform: uppercase;
+  }
+}

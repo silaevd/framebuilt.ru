@@ -1,0 +1,65 @@
+.mainText {
+  padding: 25px 15px;
+
+  &__title {
+    font-family: "ForosBold", sans-serif;
+    font-size: 27px;
+    color: $textColor;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+  }
+
+  .flex {
+    @include row-flex();
+  }
+}
+
+.mainTextItem {
+  @include col();
+  @include col-6();
+  line-height: 1.4;
+  color: $textColor;
+  font-size: 14px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  p {
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  ul {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    padding-left: 40px;
+
+    li {
+      text-align: justify;
+    }
+  }
+
+}
+
+@include max-screen(768px) {
+
+  .mainTextItem {
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+}
+
+@include max-screen(767px) {
+
+  .mainTextItem {
+    @include col-12();
+
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
+}

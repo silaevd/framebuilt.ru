@@ -1,0 +1,21 @@
+<!--<div class="projectItem">-->
+  <a class="projectItem__imgLink" routerLink="{{ project.slug }}">
+    <img class="projectItem__img" src="http://api.zemdevelopment.ru/public/{{project.cover}}"></a>
+  <div class="projectItem__info">
+    <a class="projectItem__title" routerLink="{{ project.slug }}">{{project.title}}</a>
+    <div class="flex">
+      <p class="projectItem__area">Площадь:
+        <span class="projectItem__value">{{project.area}}</span> кв.м
+      </p>
+      <p class="projectItem__size">Размеры:
+        <span class="projectItem__value">{{project.size}}</span> м
+      </p>
+    </div>
+    <div class="flex">
+      <p class="projectItem__price">
+        {{project.price}}<i class="fas fa-ruble-sign"></i>
+      </p>
+      <a class="projectItem__more" routerLink="{{ project.slug }}">Подробнее</a>
+    </div>
+  </div>
+<!--</div>-->

@@ -1,0 +1,154 @@
+<div class="wrapper">
+
+    <header class="header">
+        <div class="container">
+            <div class="flex">
+                <div class="logo">
+                    <a class="logo__link" routerLink="/">
+                        <img class="logo__img" src="./assets/images/logo.png">
+                        <!--<span class="logo__text strong">Framebuilt</span>-->
+                    </a>
+                </div>
+                <div class="headerAddress">
+                    <p class="headerAddress__text">{{ contacts.data.address }}</p>
+                    <a class="headerAddress__link" routerLink="/contacts">Показать на карте</a>
+                </div>
+                <div class="headerflexBreak"></div>
+                <div class="headerEmail">
+                    <p class="headerEmail__text">{{ contacts.data.email }}</p>
+                    <a class="headerEmail__link" routerLink="/contacts">Написать нам</a>
+                </div>
+                <div class="headerPhone">
+                    <a class="headerPhone__call" href="tel:{{tel}}">{{contacts.data.phone}}</a>
+                    <a class="headerPhone__link" href="#" data-popUp="callMe">Заказать звонок</a></div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a class="nav__button"><i class="fas fa-bars"></i></a>
+
+            <div class="nav__links">
+                <a class="nav__link" routerLink="/"         routerLinkActive="nav__link_active" [routerLinkActiveOptions]="{exact:true}">Главная</a>
+                <a class="nav__link" routerLink="/about"    routerLinkActive="nav__link_active">О Нас</a>
+                <a class="nav__link" routerLink="/projects" routerLinkActive="nav__link_active">Проекты</a>
+                <a class="nav__link" routerLink="/clients"  routerLinkActive="nav__link_active">Для клиента</a>
+                <!--<a class="nav__link" routerLink="/comments" routerLinkActive="nav__link_active">Отзывы</a>-->
+                <a class="nav__link" routerLink="/contacts" routerLinkActive="nav__link_active">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main" id="main">
+
+        <!--<section class="breadcrumbs">-->
+            <!--<div class="container">-->
+                <!--<div class="flex">-->
+                    <!--<a class="breadcrumbs__init" routerLink="/">Главная</a>-->
+                    <!--<i class="fas fa-angle-double-right"></i>-->
+                    <!--<span class="breadcrumbs__current">О нас</span>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <router-outlet></router-outlet>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="flex">
+                <div class="footerInfo">
+
+                    <div class="logo">
+                        <a class="logo__link" routerLink="/">
+                            <img class="logo__img" src="./assets/images/logo-white.png">
+                        </a>
+                    </div>
+
+                    <a class="footerInfo__address" routerLink="/contacts">{{contacts.data.address}}</a>
+                    <br>
+                    <a class="footerInfo__phone" href="tel:{{tel}}">{{contacts.data.phone}}</a>
+                    <br>
+                    <a class="footerInfo__email" href="mailto:{{contacts.data.email}}">{{contacts.data.email}}</a>
+                    <br>
+                    <a class="footerInfo__callRequest" href="#" data-popUp="callMe">Заказать звонок</a>
+                </div>
+
+                <div class="footerFeedback">
+                    <p class="footerFeedback__message">Заполните заявку</p>
+                    <p class="footerFeedback__react">Ответим в течение 10 минут</p>
+                    <form class="footerForm" id="footerForm"><!-- Hidden Required Fields -->
+                        <input type="hidden" name="admin_email" value="{{contacts.data.email}}">
+                        <input type="hidden" name="site" value="framebuilt.ru">
+                        <input type="hidden" name="form_subject" value="Сообщение с сайта framebuilt.ru"><!-- END Hidden Required Fields -->
+                        <div class="flex">
+                            <div class="footerForm__block">
+                                <div class="inputGroup">
+                                    <p class="inputErrorText"></p>
+                                    <input class="formInput" type="text" name="name" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="inputGroup">
+                                    <p class="inputErrorText"></p>
+                                    <input class="formInput" type="text" name="phone" placeholder="Ваше телефон" required>
+                                </div>
+                                <div class="inputGroup">
+                                    <p class="inputErrorText"></p>
+                                    <input class="formInput" type="text" name="email" placeholder="Ваше E-mail" required>
+                                </div>
+                            </div>
+                            <div class="footerForm__block">
+                                <div class="inputGroup">
+                                    <p class="inputErrorText"></p>
+                                    <textarea class="formInput" rows="4" name="text" placeholder="Ваш вопрос" required></textarea>
+                                </div>
+                                <button class="footerForm__submitBtn" type="submit" form="footerForm" value="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div id="callRequest" class="callRequest">
+    <a class="callRequest__button" href="#" data-popUp="callMe">
+        <i class="fas fa-phone"></i>
+    </a>
+    <a id="callRequestClose" class="callRequest__close" href="">
+        <i class="fas fa-times"></i>
+    </a>
+</div>
+
+<div class="popUp hidden">
+    <div class="requestPopUp zoom-anim-dialog" id="requestPopUp">
+        <form class="requestForm" id="callMe" action="">
+
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="admin_email" value="{{contacts.data.email}}">
+            <input type="hidden" name="site" value="framebuilt.ru">
+            <input type="hidden" name="form_subject" value="Заказ звонка с сайта framebuilt.ru">
+            <!-- END Hidden Required Fields -->
+
+            <div class="inputGroup">
+                <p class="inputErrorText"></p>
+                <input class="formInput" type="text" name="name" placeholder="Ваше имя" required>
+            </div>
+            <div class="inputGroup">
+                <p class="inputErrorText"></p>
+                <input class="formInput" type="text" name="phone" placeholder="Ваше телефон" required>
+            </div>
+            <div class="inputGroup">
+                <p class="inputErrorText"></p>
+                <textarea class="formInput" rows="4" name="text" placeholder="Ваш вопрос"></textarea>
+            </div>
+            <button class="requestForm__submitBtn" type="submit" form="callMe" value="submit">Отправить</button>
+        </form>
+    </div>
+    <div class="thankyouPopUp" id="thankyouPopUp"><img class="thankyouPopUp__img" src="./assets/images/operator.jpg" alt="operator">
+        <h2 class="thankyouPopUp__thanks">Спасибо за заявку!</h2>
+        <p class="thankyouPopUp__manager">Менеджер свяжется с Вами в ближайшее время</p>
+        <hr>
+    </div>
+</div>

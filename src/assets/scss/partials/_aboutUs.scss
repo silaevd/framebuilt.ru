@@ -1,0 +1,44 @@
+.aboutUs {
+  background: #f5f5f3;
+  padding: 0 15px 25px;
+  flex: 1 0 auto;
+
+  &__title {
+    font-family: "ForosBold", sans-serif;
+    color: $textColor;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    text-align: justify;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  &__logo {
+    max-width: 450px;
+    display: block;
+    margin: 107px auto;
+  }
+
+  &__cert {
+    text-align: center;
+    padding: 15px 0;
+
+    img {
+      width: 150px;
+      height: auto;
+      margin: 0 15px;
+    }
+  }
+}
+
+//@include min-screen(1300px) {
+//  .aboutUs {
+//    &__logo {
+//      margin-top: 100px;
+//      margin-bottom: 100px;
+//    }
+//  }
+//}

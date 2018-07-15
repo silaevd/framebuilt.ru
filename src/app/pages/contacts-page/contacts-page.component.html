@@ -1,0 +1,82 @@
+<section class="pageTitle">
+    <div class="container">
+        <h1>Контакты</h1>
+    </div>
+</section>
+
+<section class="contacts">
+    <div class="container">
+        <div class="flex">
+            <div class="contactsInfo">
+
+                <div class="contactsInfo__item">
+                    <h3>Наш офис</h3>
+                    <p>{{contacts.data.address}}</p>
+                </div>
+
+                <div class="contactsInfo__item">
+                    <h3>Выставочная площадка</h3>
+                    <p>Московская область, пос. Заворово</p>
+                </div>
+
+                <div class="contactsInfo__item">
+                    <h3>Телефон</h3>
+                    <a href="tel:{{tel}}">{{contacts.data.phone}}</a>
+                </div>
+
+                <div class="contactsInfo__item">
+                    <h3>E-mail</h3>
+                    <a href="mailto:info@zemdev.ru">{{contacts.data.email}}</a>
+                </div>
+
+            </div>
+            <div class="writeToUs">
+                <p class="writeToUs__message">Мы на связи, звоните и пишите нам!</p>
+                <p class="writeToUs__text">
+                    Если до нас не дозвониться или у Вас есть вопросы - оставьте нам заявку,
+                    мы свяжемся с Вами в самое ближайшее время!
+                </p>
+                <form class="writeToUsForm" id="writeToUsForm">
+
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="admin_email" value="{{contacts.data.email}}">
+                    <input type="hidden" name="site" value="zemdevelopment.ru">
+                    <input type="hidden" name="form_subject" value="Сообщение с сайта zemdevelopment.ru">
+                    <!-- END Hidden Required Fields -->
+
+                    <div class="flex">
+                        <div class="writeToUsForm__block">
+                            <div class="inputGroup">
+                                <p class="inputErrorText"></p>
+                                <input class="formInput" type="text" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="inputGroup">
+                                <p class="inputErrorText"></p>
+                                <input class="formInput" type="text" name="phone" placeholder="Ваше телефон" required>
+                            </div>
+                            <div class="inputGroup">
+                                <p class="inputErrorText"></p>
+                                <input class="formInput" type="text" name="email" placeholder="Ваше E-mail" required>
+                            </div>
+                        </div>
+                        <div class="writeToUsForm__block">
+                            <div class="inputGroup">
+                                <p class="inputErrorText"></p>
+                                <textarea class="formInput" rows="4" name="text" placeholder="Ваш вопрос"
+                                          required></textarea>
+                            </div>
+
+                            <button class="writeToUsForm__submitBtn" type="submit" form="writeToUsForm" value="submit">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="yandexMap">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d03612f28d713e84742847ca6b39172bbeec270def713ae34d86354b7e5abdc&amp;amp;source=constructor"
+            width="100%" height="400" frameborder="0"></iframe>
+</section>

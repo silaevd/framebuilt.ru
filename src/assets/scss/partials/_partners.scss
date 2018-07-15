@@ -1,0 +1,42 @@
+.partners {
+  padding: 25px 15px;
+  background: $sectionBg;
+
+  &__title {
+    font-family: "ForosBold", sans-serif;
+    font-size: 27px;
+    color: $textColor;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .flex {
+    @include row-flex();
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    width: 150px;
+    background: $white;
+    margin: 0 15px 10px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    vertical-align:bottom;
+  }
+
+}
+
+
+
+@include max-screen(389px) {
+  .partners__item {
+    width: 140px;
+  }
+}

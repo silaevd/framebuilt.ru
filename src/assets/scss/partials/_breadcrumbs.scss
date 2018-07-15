@@ -1,0 +1,15 @@
+.breadcrumbs {
+  font-size: 14px;
+  padding: 0 15px;
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 45px;
+  }
+
+  i {
+    margin: 0 5px;
+  }
+}

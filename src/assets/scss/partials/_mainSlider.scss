@@ -1,0 +1,66 @@
+.mainSlider {
+
+  &__text {
+    font-family: "ForosBold", sans-serif;
+    font-size: 56px;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 10px black, 1px 0 5px black;
+    padding: 1.2em 15px 0;
+  }
+}
+
+@include max-screen(1200px) {
+  .mainSlider {
+
+    &__text {
+      font-size: 48px;
+    }
+  }
+}
+
+@include max-screen(1024px) {
+  .mainSlider {
+
+    &__text {
+      font-size: 42px;
+    }
+  }
+}
+
+@include max-screen(768px) {
+  .mainSlider {
+
+    &__text {
+      font-size: 35px;
+    }
+  }
+}
+
+@include max-screen(625px) {
+  .mainSlider {
+
+    &__text {
+      font-size: 30px;
+    }
+  }
+}
+
+@include max-screen(550px) {
+  .mainSlider {
+
+    &__text {
+      font-size: 22px;
+    }
+  }
+}
+
+@include max-screen(414px) {
+  .mainSlider {
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

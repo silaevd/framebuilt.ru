@@ -1,0 +1,175 @@
+.contacts {
+  background: $sectionBg;
+  padding: 0 15px 25px;
+
+  .flex {
+    @include row-flex();
+  }
+}
+
+.contactsInfo {
+  @include col();
+  @include col-4();
+  order: 1;
+
+  &__item {
+    margin-bottom: 25px;
+
+    h3 {
+      font-family: "ForosMedium", sans-serif;
+      color: $linkColor;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    p, a {
+      font-size: 18px;
+    }
+
+    a {
+      color: $textColor;
+      &:hover {
+        color: $textColor;
+      }
+    }
+  }
+
+}
+
+.writeToUs {
+  @include col();
+  @include col-8();
+  order: 2;
+
+  &__message {
+    font-family: "ForosMedium", sans-serif;
+    color: $linkColor;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    line-height: 1.4;
+  }
+}
+
+.writeToUsForm {
+
+  &__block {
+    @include col();
+    @include col-6();
+
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .inputGroup {
+
+    .inputErrorText {
+      font-size: 12px;
+      color: $red;
+      height: 13px;
+    }
+
+    .formInput {
+      font-family: "ForosRegular", sans-serif;
+      font-size: 16px;
+      color: $textColor;
+      width: 100%;
+      height: 34px;
+      padding: 6px 12px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+      outline: none;
+    }
+
+    textarea.formInput{
+      resize: none;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__submitBtn {
+    font-family: "ForosMedium", sans-serif;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 34px;
+    background: #337ab7;
+    border-color: #2e6da4;
+    border-radius: 4px;
+    transition: $hover-transition;
+
+    &:hover {
+      background: #286090;
+      border-color: #286090;
+    }
+
+    &:active {
+      box-shadow: inset 0 1px 10px rgba(0,0,0,0.4);
+    }
+  }
+}
+
+@include max-screen(768px) {
+
+  .footerInfo {
+
+    &__item {
+      font-size: 18px;
+    }
+  }
+}
+
+@include max-screen(600px) {
+
+  .contactsInfo {
+
+    &__item {
+      font-size: 16px;
+    }
+  }
+}
+
+@include max-screen(480px) {
+
+  .contacts {
+    background: $sectionBg;
+    padding-top: 15px;
+  }
+
+  .contactsInfo {
+    @include col-12();
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .writeToUs {
+    @include col-12();
+
+    &__message, &__text {
+      text-align: center;
+    }
+  }
+}
+
+@include max-screen(375px) {
+
+  .writeToUsForm {
+
+    &__block {
+      @include col-12();
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

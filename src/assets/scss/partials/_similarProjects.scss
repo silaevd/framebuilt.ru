@@ -1,0 +1,10 @@
+.similarProjects {
+  background: $sectionBg;
+  padding: 25px 15px;
+
+  &__title {
+    font-family: "ForosMedium", sans-serif;
+    color: $linkColor;
+    text-transform: uppercase;
+  }
+}

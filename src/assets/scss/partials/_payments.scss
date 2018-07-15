@@ -1,0 +1,53 @@
+.payments {
+  background: #f5f5f3;
+  padding: 25px 15px;
+
+  &__title {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__items {
+    margin-bottom: 25px;
+
+    .flex {
+      @include row-flex();
+      justify-content: center;
+    }
+  }
+}
+
+.paymentsItem {
+  @include col();
+  @include col-2();
+  text-align: center;
+
+  i {
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-family: "ForosMedium", sans-serif;
+  }
+}
+
+.payments {
+  &__text {
+    text-align: center;
+  }
+}
+
+@include max-screen(1024px) {
+  .paymentsItem {
+    @include col-3();
+  }
+}
+
+@include max-screen(480px) {
+
+  .paymentsItem {
+    @include col-12();
+    margin-bottom: 15px;
+  }
+}

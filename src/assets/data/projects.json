@@ -1,0 +1,53 @@
+{
+  "projects" : [
+    {
+      "projectId": "1",
+      "slug": "esthetic",
+      "imageUrl": "http://zemdevelopment.ru/img/projects/4/4-7.jpg",
+      "title": "Проект Эстетик",
+      "area": "226,9",
+      "size": "16,8х10",
+      "price": "6 800 000",
+      "deadline": "20 дней",
+      "isActive": true,
+      "isPopular": true
+
+    },
+    {
+      "projectId": "2",
+      "slug": "esthetic2",
+      "imageUrl": "http://zemdevelopment.ru/img/projects/4/4-7.jpg",
+      "title": "Проект Эстетик2",
+      "area": "226,9",
+      "size": "16,8х10",
+      "price": "6 800 000",
+      "deadline": "20 дней",
+      "isActive": true,
+      "isPopular": true
+    },
+    {
+      "projectId": "3",
+      "slug": "esthetic3",
+      "imageUrl": "http://zemdevelopment.ru/img/projects/4/4-7.jpg",
+      "title": "Проект Эстетик3",
+      "area": "226,9",
+      "size": "16,8х10",
+      "price": "6 800 000",
+      "deadline": "20 дней",
+      "isActive": true,
+      "isPopular": false
+    },
+	{
+      "projectId": "3",
+      "slug": "esthetic3",
+      "imageUrl": "http://zemdevelopment.ru/img/projects/4/4-7.jpg",
+      "title": "Проект Эстетик",
+      "area": "226,9",
+      "size": "16,8х10",
+      "price": "6 800 000",
+      "deadline": "20 дней",
+      "isActive": true,
+      "isPopular": false
+    }
+  ]
+}

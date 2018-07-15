@@ -1,0 +1,206 @@
+<section class="pageTitle hidden">
+    <div class="container">
+        <h1>Строительство загородных домов | ЗемДев</h1>
+    </div>
+</section>
+
+<section class="mainSlider">
+    <div class="fotorama" data-auto="false">
+        <img *ngFor="let sliderImage of sliderImages" src="http://api.zemdevelopment.ru/public/{{sliderImage}}" alt="">
+    </div>
+</section>
+
+
+<section class="popularProjects">
+    <div class="container">
+        <h3 class="popularProjects__title">Популярные проекты</h3>
+        <div class="popularProjects__items">
+            <div class="flex">
+                <app-project-item *ngFor="let project of projects | isPopular | isActive" [project]="project"></app-project-item>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reasons">
+    <div class="container">
+        <div class="flex">
+            <div class="reasonsItem reasonsItem_first">
+                <p class="reasonsItem_first__text">5 причин<br>выбрать нас</p>
+            </div>
+            <div class="reasonsItem"><img class="reasonsItem__img" src="./assets/images/reasons/House.png">
+                <h4 class="reasonsItem__title">Комплексный подход к строительству</h4>
+                <p class="reasonsItem__text">
+                    У нас представлено по 3 комплектации к
+                    каждому проекту дома, что позволяет Вам уделять внимание
+                    только выбору цвета врутренней и внешней отделки.
+                </p>
+            </div>
+            <div class="reasonsItem"><img class="reasonsItem__img" src="./assets/images/reasons/Calendar.png">
+                <h4 class="reasonsItem__title">Cрок строительства дома всего 30 дней</h4>
+                <p class="reasonsItem__text">
+                    Благодаря комплексному подходу к строительству мы сократили
+                    сроки возведения дома под ключ до 30 суток
+                </p>
+            </div>
+            <div class="reasonsItem"><img class="reasonsItem__img" src="./assets/images/reasons/Quality.png">
+                <h4 class="reasonsItem__title">Только качественные материалы</h4>
+                <p class="reasonsItem__text">
+                    При строительстве домов мы используем качественные и
+                    сертифицированные материалы таких производителей как Rehae,
+                    Grand Line, Isover, Paroc и другие.
+                </p>
+            </div>
+            <div class="reasonsItem"><img class="reasonsItem__img" src="./assets/images/reasons/Staff.png">
+                <h4 class="reasonsItem__title">Профессиональные мастера из белоруссии</h4>
+                <p class="reasonsItem__text">
+                    Над строительством Вашего дома будут работать
+                    высококвалифицированные бригады с 10-ти летним опытом
+                    строительства.
+                </p>
+            </div>
+            <div class="reasonsItem"><img class="reasonsItem__img" src="./assets/images/reasons/Info.png">
+                <h4 class="reasonsItem__title">Вы всегда будете в курсе хода строительства</h4>
+                <p class="reasonsItem__text">
+                    Прораб Вашего объекта всегда на связи. Дополнительно, Вам
+                    будет предоставлен доступ к видео трансляции в режиме
+                    реального времени.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partners">
+    <div class="container">
+        <h2 class="partners__title">Наши партнеры</h2>
+        <div class="flex">
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/bonolit.png"></div>
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/wiener.png"></div>
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/grandline.png"></div>
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/isover.png"></div>
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/kbe.png"></div>
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/paroc.png"></div>
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/rehau.png"></div>
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/seneg.png"></div>
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/tehnonikol.png"></div>
+            <div class="partners__item"><img class="partners__img" src="./assets/images/partners/ytong.png"></div>
+        </div>
+    </div>
+</section>
+
+<section class="mainText">
+    <div class="container">
+        <h2 class="mainText__title">Проектирование и строительство загородных домов</h2>
+        <div class="flex">
+            <div class="mainTextItem">
+                <h2>Быстро и дешево — не значит плохо</h2>
+                <p>
+                    Некоторые, увидев весьма скромную цену «дома мечты»,
+                    задаются вопросом, почему загородное строительство
+                    настолько доступно, не повлияет ли невысокая стоимость
+                    на качество, и не будут ли возводить дом
+                    неквалифицированные «среднеазиатские гости».
+                </p>
+                <p>
+                    Не стоит переживать за устойчивость и долговечность
+                    строения. При разработке проекта и строительстве
+                    учитываются особенности местности и грунта, на участке,
+                    где будет возводиться дом.
+                </p>
+                <p>За весьма умеренную цену мы предлагаем:</p>
+                <ul>
+                    <li><span class="strong">Независимость от времени года</span> – применяемые технологии дают
+                        возможность строить
+                        дома в любой сезон;
+                    </li>
+                    <li><span class="strong">Быстроту постройки.</span> Детальная проработка проекта позволяет избежать
+                        многочисленных переделок, вызванных проектными
+                        недоработками. Строительство загородного дома будет
+                        закончено всего за месяц;
+                    </li>
+                    <li><span class="strong">Отличное качество.</span> После наших специалистов клиенту не придется
+                        тратить
+                        время на ликвидацию строительных огрехов;
+                    </li>
+                    <li>
+                        Возведение зданий с высокой энергоэффективностью,
+                        пожароустойчивостью, долговечностью, экологичностью
+                        и шумоизоляцией;
+                    </li>
+                    <li><span class="strong">«Прозрачность» расходов.</span> Клиенты знают, куда были потрачены деньги
+                        или
+                        материалы;
+                    </li>
+                    <li>Качество строительства, отвечающие имеющимся СНиПам;</li>
+                    <li>
+                        Сборку теплового контура, прокладку коммуникаций и
+                        инженерных систем. Вам не придется искать
+                        специалистов «на стороне». Компания ЗемДев выполнит
+                        любые строительные, монтажные и отделочные работы
+                        своими силами.
+                    </li>
+                </ul>
+                <p>
+                    Кроме снижения цены, современные высокотехнологичные
+                    методы позволили<span class="strong">
+                           значительно сократить время возведения
+                          строений.</span>
+                </p>
+            </div>
+            <div class="mainTextItem">
+                <h2>Сколько стоит дом построить</h2>
+                <p>
+                    Все проекты малоэтажного строительства, представленные
+                    на сайте, имеют приблизительную цену. Итоговая стоимость
+                    зависит от отделки, утеплителей, коммуникаций и других
+                    факторов.
+                </p>
+                <p>
+                    Клиент, не разбирающийся в тонкостях возведения домов,
+                    часто теряется и не знает, какие материалы выбрать.
+                    Наши специалисты, имеющие большой опыт загородного
+                    строительства, помогут подобрать утеплители, наполнители
+                    и кровельные покрытия, чтобы<span class="strong"> заказчик не потратил деньги впустую.</span>
+                </p>
+                <p>Для этого компания ЗемДев предлагает:</p>
+                <ul>
+                    <li>
+                        Составление проекта под имеющиеся средства. Можно
+                        выбрать оптимальный вариант отделки и комплектации,
+                        чтобы не изыскивать дополнительные финансовые
+                        возможности и не затягивать новоселье;
+                    </li>
+                    <li>
+                        «Подгонку» дома под нужды конкретной семьи. Это
+                        позволит избежать дальнейших переделок и
+                        перепланировок;
+                    </li>
+                    <li>
+                        Смелые и актуальные дизайнерские решения. Наши
+                        специалисты подберут идеальный дизайн внешней и
+                        внутренней отделки здания. Они находятся в курсе
+                        последних тенденций дизайна загородных домов,
+                        поэтому построенный дом будет не только красивым,
+                        но и «модным».
+                    </li>
+                </ul>
+                <p>
+                    В России и за рубежом уже давно применяется каркасное
+                    и блочное строительство. Дома, возведенные по этим
+                    передовым методикам, показали во время эксплуатации
+                    свою надежность и долговечность.
+                </p>
+                <p>
+                    Наша компания дорожит своей репутацией, поэтому
+                    применяет при строительстве только брендовые
+                    материалы и проверенные технологии. Возведение домов
+                    фирма ЗемДев доверяет высококвалифицированным
+                    мастерам, имеющим опыт блочного и каркасного
+                    строительства. Клиенты могут в этом убедиться сами,
+                    ведь за ходом стойки можно наблюдать онлайн.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

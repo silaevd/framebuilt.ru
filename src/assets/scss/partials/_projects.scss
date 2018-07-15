@@ -1,0 +1,30 @@
+.projects {
+  background: #f5f5f3;
+  padding: 0 15px;
+
+  &__title {
+    font-family: "ForosBold", sans-serif;
+    color: $textColor;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    text-align: justify;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  &__items {
+    padding-top: 25px;
+
+    >.flex {
+      @include row-flex();
+    }
+  }
+
+
+  .projectItem {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,59 @@
+.callRequest {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  opacity: 0;
+  transition: $hover-transition;
+
+  &__button {
+    font-size: 30px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: $olive;
+    transition: $hover-transition;
+    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    animation: pulse 2s infinite;
+    &:hover {
+      text-decoration: none;
+      background: darken($olive, 10%);
+      color: $white;
+      animation: none;
+    }
+  }
+
+  &__close {
+    font-size: 12px;
+    color: $textColor;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    justify-content: center;
+    transition: $hover-transition;
+    &:hover {
+      text-decoration: none;
+      color: $red;
+    }
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($olive, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba($olive, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($olive, 0);
+  }
+}
